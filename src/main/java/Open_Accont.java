@@ -21,7 +21,7 @@ public class Open_Accont extends Banking
 		mobile=sc.nextLong();
 		balance=0;
 		account_no=0;
-		System.out.println("Account opening in Progress");
+		System.out.println("Account opening in Progress.... Please Wait!!");
 		sc.close();
 	}
 	public long account_open()

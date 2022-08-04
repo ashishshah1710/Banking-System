@@ -5,15 +5,20 @@ public class Main {
 	@SuppressWarnings("resource")
 	public static void show_menu()
 	{
+		int option=1;
+		Scanner sc=new Scanner(System.in);
+		
+		while(option != 5)
+		{
 		System.out.println("1.Open a new Account");
 		System.out.println("2.Check Balance");
 		System.out.println("3.Withdrawal");
 		System.out.println("4.Deposite");
 		System.out.println("5.Exit");
 		
-		Scanner sc=new Scanner(System.in);
+		
 		System.out.println("Press the Above keys for further operation : ");
-		int option=sc.nextInt();
+	    option=sc.nextInt();
 		
 		switch(option)
 		{
@@ -47,21 +52,34 @@ public class Main {
 		
 		default : System.out.println("Invalid Choice");
 				  break;
-		case 5  : return ;
+		case 5  :System.out.println("Thankyou for using Banking Service") ;break;
 		}
-		sc.close();
+		}
 	}
-	public static void main(String[] args)
+	public static void main(String[] args) throws ExitException
 	{
 	
-		//Scanner s=new Scanner (System.in);
-		
-		
+		int i=1;
+		Scanner s=new Scanner (System.in);
+		show_menu();
+		/*while(true)
+		{
 		 show_menu();
+		 System.out.print("Press 1 for continue 0 for exit");
+		 i=s.nextInt();
+		 try {
+		 if(i == 0)
+		 {
+			 throw new Exception();
+		 }}
+		 catch(Exception e )
+		 {
+			 System.out.print("Program Ends" + e);
+		 }
+		}
+		*/
 		
 		
-		
-//		s.close();
 	}
 
 }

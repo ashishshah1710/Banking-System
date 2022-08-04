@@ -25,11 +25,18 @@ public class Check_balance extends Banking
 			ResultSet result = stmt.executeQuery("select * from  Account where" + " Account_number = '"+account_num+"'  ");
 //			ResultSet result = stmt.executeQuery("select * from  Account ");
 			
+			int c=0;
 				while(result.next())
 			    {
+					c++;
 			    	balance=result.getDouble(3);
 			    	
 			    }
+				if(c == 0)
+				{
+					System.out.print("Not a Valid Account number\n");
+					return balance ;
+				}
 			
 		  result.close();
 			

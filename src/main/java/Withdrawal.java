@@ -19,11 +19,19 @@ public class Withdrawal extends Banking
 			
 			Statement stmt = con.createStatement();
 			ResultSet res = stmt.executeQuery("select * from  Account where" + " Account_number = '"+account_num+"'  ");
+			
 			double bal=0;
+			int c=0;
 			while(res.next())
 		    {
+				c++;
 		    	 bal= res.getDouble(3);
 		    }
+			if(c == 0)
+			{
+				System.out.print("Not a Valid Account number\n");
+				return;
+			}
 			res.close();
 			try
 			{
