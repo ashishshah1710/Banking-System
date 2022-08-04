@@ -59,9 +59,10 @@ public class Main {
 	public static void main(String[] args) throws ExitException
 	{
 	
-		int i=1;
-		Scanner s=new Scanner (System.in);
+		
 		show_menu();
+		
+		
 		/*while(true)
 		{
 		 show_menu();
